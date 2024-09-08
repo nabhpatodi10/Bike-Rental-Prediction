@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Prediction</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Prediction</title>
+    <style>
+        body {
+            background-image: url('../static/final-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        input[type="number"], input[type="radio"] {
+            margin: 10px 0;
+            padding: 5px;
+            width: 40%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button{
+            width: 30%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 5px;
+            color: #ccc;
+            transition: 0.5s;
+            text-align: center;
+            background-color: rgb(68, 125, 231);
+            font-size: 16px;
+        }
+        .button:hover{
+            background-color: #28a745;
+            color: #ccc;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        .custom-radio {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .custom-radio input[type="radio"] + label {
+            padding: 5px 10px;
+            background-color: #444;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .custom-radio input[type="radio"]:hover + label {
+            background-color: #28a745;
+        }
+        .custom-radio input[type="radio"]:checked + label {
+            background-color: #28a745;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+    </style>          
+
+</head>
+<body>
+        <h1 style="color: rgb(24, 50, 95);">Bike Rental Prediction</h1>
+        <form action="/readings" method="post">
+            <label for="season">Season:</label>
+            <input type="number" id="season" name="season" placeholder="Season" min ="1" max = "4" step="1"><br><br>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" placeholder="Year" min ="0" max = "1" step="1"><br><br>
+
+            <label for="month">Month:</label>
+            <input type="number" id="month" name="month" placeholder="Month" min ="1" max = "12" step="1"><br><br>
+
+            <div class="custom-radio">
+                <label for="holiday">Holiday:</label>
+                <input type="radio" id="holidayTrue" name="holiday" value="True">
+                <label for="holidayTrue" style="margin-right: 5px;">True</label>
+                <input type="radio" id="holidayFalse" name="holiday" value="False">
+                <label for="holidayFalse"> False</label>
+            </div><br><br>
+
+            <label for="weekday">Weekday:</label>
+            <input type="number" id="weekday" name="weekday" placeholder="Weekday" min ="0" max = "6" step="1"><br><br>
+
+            <div class="custom-radio">
+                <label for="holiday">Working Day:</label>
+                <input type="radio" id="workingdayTrue" name="workingday" value="True">
+                <label for="workingdayTrue", style="margin-right: 5px;"> True</label>
+                <input type="radio" id="workingdayFalse" name="workingday" value="False">
+                <label for="workingdayFalse"> False</label>
+            </div><br><br>
+
+            <label for="weather_situation">Weather Situation:</label>
+            <input type="number" id="weather_situation" name="weather_situation" placeholder="Weather Situation" min ="1" max = "4" step="1"><br><br>
+
+            <label for="temperature">Temperature (in Celsius):</label>
+            <input type="number" id="temperature" name="temperature" placeholder="Temperature" min ="0"  step="0.1"><br><br>
+
+            <label for="feels_like_temperature">Feels Like Temperature:</label>
+            <input type="number" id="feels_like_temperature" name="feels_like_temperature" placeholder="Feels Like Temperature" min ="0"  step="0.1"><br><br>
+
+            <label for="humidity">Humidity:</label>
+            <input type="number" id="humidity" name="humidity" placeholder="Humidity" min ="0"  step="0.1"><br><br>
+
+            <label for="windspeed">Windspeed:</label>
+            <input type="number" id="windspeed" name="windspeed" placeholder="Wind Speed" min ="0"  step="0.1"><br><br>
+
+            <button class="button">Submit</button>
+        </form>
+</body>
+</html>

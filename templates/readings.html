@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Prediction</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Prediction</title>
+    <style>
+        body {
+            background-image: url('../static/final-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .content_area {
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+    </style>          
+
+</head>
+<body>
+        <h1 style="color: rgb(24, 50, 95);">Bike Rental Prediction</h1>
+        <div class="content_area">
+            <label for="season">Season: {{season}}</label><br><br>
+
+            <label for="year">Year: {{year}}</label><br><br>
+
+            <label for="month">Month: {{month}}</label><br><br>
+
+            <label for="holiday">Holiday: {{holiday}}</label><br><br>
+
+            <label for="weekday">Weekday: {{weekday}}</label><br><br>
+
+            <label for="holiday">Working Day: {{workingday}}</label><br><br>
+
+            <label for="weather_situation">Weather Situation: {{weather_situation}}</label><br><br>
+
+            <label for="temperature">Temperature (in Celsius): {{temperature}}</label><br><br>
+
+            <label for="feels_like_temperature">Feels Like Temperature: {{feels_like_temperature}}</label><br><br>
+
+            <label for="humidity">Humidity: {{humidity}}</label><br><br>
+
+            <label for="windspeed">Windspeed: {{humidity}}</label><br><br>
+
+            <label for="readings" style="color: #28a745; font-size: 22px;">Prediction: {{prediction}}</label>
+        </div>
+</body>
+</html>

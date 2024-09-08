@@ -1,11 +1,9 @@
-from ast import For
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi import Form
 import uvicorn
-from pydantic import BaseModel, conint
 import joblib
 import pandas as pd
 import math
